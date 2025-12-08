@@ -1,0 +1,27 @@
+const prompt = require('prompt-sync')();
+/*
+
+const x = parseInt(prompt("Anna luku: "));
+const y = parseInt(prompt("Anna toinen luku: "));
+ 
+function vertaa(x,y) {
+    if (x > y)
+        console.log("isompi luku on ", x);
+    else if (y > x)
+        console.log("isompi luku on ", y);
+    else 
+        console.log("yhtasuuret");
+}
+
+console.log(vertaa(x,y));
+*/
+
+
+function palindromi(sana) {
+  const norm = sana.toLowerCase();        
+  const kaannetty = norm.split("").reverse().join("");
+  return norm === kaannetty;
+}
+
+console.log(palindromi("innostunutsonni"));
+console.log(palindromi("maito"));
