@@ -23,18 +23,7 @@ router.get('/:id',
                 response.json(dbResult);
             }
         })
-    });
-
-router.get('/:id/:id',
-    function (request, response) {
-        arviointi.getOne(request.params.id, request.params.id, function (err, dbResult) {
-            if (err) {
-                response.json(err);
-            } else {
-                response.json(dbResult);
-            }
-        })
-    });    
+    });   
 
 
 router.post('/', 
@@ -52,18 +41,6 @@ function(request, response) {
 router.delete('/:id', 
 function(request, response) {
   arviointi.delete(request.params.id, function(err, dbResult) {
-    if (err) {
-      response.json(err);
-    } else {
-      response.json(dbResult);
-    }
-  });
-});
-
-
-router.put('/:id/:id', 
-function(request, response) {
-  arviointi.update(request.params.id, request.params.id, request.body, function(err, dbResult) {
     if (err) {
       response.json(err);
     } else {
